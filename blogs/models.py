@@ -17,6 +17,8 @@ class Post(MixinComunFields):
     content = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
 
+    # categories = models.ManyToManyField(Category)
+
     class Meta:
         ordering = ["-created_at"]
 
