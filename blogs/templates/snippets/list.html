@@ -1,0 +1,7 @@
+<div class="row">
+    {% for object in blogs %}
+    <div class="col-3 mt-5">
+        {% include "snippets/blog.html" with blog=object %}
+    </div>
+    {% endfor %}
+</div>
