@@ -12,4 +12,6 @@ def set_slug(sender, instance, *args, **kwargs):
 
         while Post.objects.filter(slug=slug).exists():
             slug = slugify("{}-{}".format(instance.title, str(uuid.uuid4)[:8]))
+    else:
+        slug = instance.slug
     instance.slug = slug

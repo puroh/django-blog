@@ -8,11 +8,12 @@ class CategoryAdmin(admin.ModelAdmin):
         "slug",
         "subtitle",
     )
-    list_filter = ("status",)
+    # list_filter = ("status",)
     search_fields = (
         "title",
         "content",
     )
+    exclude = ("slug",)
 
 
 admin.site.register(Category, CategoryAdmin)

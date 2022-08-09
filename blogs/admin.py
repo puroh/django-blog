@@ -13,6 +13,7 @@ class PostAdmin(admin.ModelAdmin):
         "title",
         "content",
     )
+    exclude = ("slug",)
 
 
 admin.site.register(Post, PostAdmin)
