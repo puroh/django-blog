@@ -1,0 +1,11 @@
+<div class="card h-100">
+
+    <div class="card-body">
+        <h5 class="card-title">{{ blog.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ blog.description }}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">{{ blog.categories }}</h6>
+        <p class="blog-post-meta">{{ blog.created_at }} by {{blog.author.first_name }}</p>
+        <p class="card-text">{{ blog.content }}</p>
+        <a href="{% url 'blogs:post_detail' blog.slug %}" class="btn btn-primary">Ver más</a>
+    </div>
+</div>
